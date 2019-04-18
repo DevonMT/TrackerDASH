@@ -1,41 +1,41 @@
 <template>
-	<v-container class='signin' fill-height fluid>
+	<v-container class="signin" fill-height fluid>
 		<v-layout align-center justify-center>
 			<v-flex md4 sm6 xs12>
 				<v-card elevation-12>
-					<v-toolbar color='secondary' dark flat>
-						<v-toolbar-title class='headline'>Sign In</v-toolbar-title>
+					<v-toolbar color="secondary" dark flat>
+						<v-toolbar-title class="headline">Sign In</v-toolbar-title>
 					</v-toolbar>
-					<v-card-text class='py-4'>
-						<v-form @submit.prevent lazy-validation ref='form'>
+					<v-card-text class="py-4">
+						<v-form @submit.prevent lazy-validation ref="form">
 							<v-text-field
-								:rules='eRules'
-								@keyup.enter='signIn'
-								class='pb-3'
-								label='Email'
-								name='login'
-								prepend-icon='alternate_email'
-								type='email'
-								v-model='email'
+								:rules="eRules"
+								@keyup.enter="signIn"
+								class="pb-3"
+								label="Email"
+								name="login"
+								prepend-icon="alternate_email"
+								type="email"
+								v-model="email"
 							></v-text-field>
 							<v-text-field
-								:rules='pRules'
-								@keyup.enter='signIn'
-								label='Password'
-								name='password'
-								prepend-icon='lock'
-								type='password'
-								v-model='password'
+								:rules="pRules"
+								@keyup.enter="signIn"
+								label="Password"
+								name="password"
+								prepend-icon="lock"
+								type="password"
+								v-model="password"
 							></v-text-field>
 						</v-form>
 					</v-card-text>
 					<v-card-actions>
-						<v-btn @click='reset' color='error' flat>Reset</v-btn>
+						<v-btn @click="reset" color="error" flat>Reset</v-btn>
 						<v-spacer></v-spacer>
-						<v-btn color='secondary' flat nuxt to='/users/signup'>Sign Up</v-btn>
-						<v-btn :loading='loading' @click='signIn' color='primary darken-1' light>Sign In</v-btn>
+						<v-btn color="secondary" flat nuxt to="/users/signup">Sign Up</v-btn>
+						<v-btn :loading="loading" @click="signIn" color="primary tertiary--text">Sign In</v-btn>
 					</v-card-actions>
-					<v-alert :value='feedback' transition='fade-transition' type='error'>{{ feedback }}</v-alert>
+					<v-alert :value="feedback" transition="fade-transition" type="error">{{ feedback }}</v-alert>
 				</v-card>
 			</v-flex>
 		</v-layout>
