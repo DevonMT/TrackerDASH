@@ -11,7 +11,7 @@
 							<v-layout row wrap>
 								<v-flex class='pb-2' md6 xs12>
 									<v-text-field
-										:rules='[v => !!v || 'Please enter your first name']'
+										:rules='[v => !!v || "Please enter your first name"]'
 										@keyup.enter='signUp'
 										label='First Name'
 										prepend-icon='label'
@@ -20,7 +20,7 @@
 								</v-flex>
 								<v-flex md6 xs12>
 									<v-text-field
-										:rules='[v => !!v || 'Please enter your last name']'
+										:rules='[v => !!v || "Please enter your last name"]'
 										@keyup.enter='signUp'
 										label='Last Name'
 										prepend-icon='label'
@@ -37,7 +37,7 @@
 								v-model='username'
 							></v-text-field>
 							<v-text-field
-								:rules='[v => !!v || 'Please enter an email']'
+								:rules='[v => !!v || "Please enter an email"]'
 								@keyup.enter='signUp'
 								class='pb-2'
 								label='Email'
@@ -47,7 +47,7 @@
 								v-model='email'
 							></v-text-field>
 							<v-text-field
-								:rules='[v => !!v || 'Please enter a password']'
+								:rules='[v => !!v || "Please enter a password"]'
 								@keyup.enter='signUp'
 								class='pb-2'
 								label='Password'
@@ -57,7 +57,7 @@
 								v-model='password'
 							></v-text-field>
 							<v-text-field
-								:rules='[v => !!v || 'Please repeat the password']'
+								:rules='[v => !!v || "Please repeat the password"]'
 								@keyup.enter='signUp'
 								label='Repeat password'
 								name='rPassword'
@@ -70,7 +70,7 @@
 					<v-card-actions>
 						<v-btn @click='reset' color='error' flat>Reset</v-btn>
 						<v-spacer></v-spacer>
-						<v-btn :to='{ name: 'Signin' }' color='secondary' flat router>Sign In</v-btn>
+						<v-btn color='secondary' flat router to='/users/signin'>Sign In</v-btn>
 						<v-btn :loading='loading' @click='signUp' color='primary darken-1' light>Sign Up</v-btn>
 					</v-card-actions>
 					<v-alert :value='feedback' transition='fade-transition' type='error'>{{ feedback }}</v-alert>
