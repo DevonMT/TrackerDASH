@@ -10,8 +10,8 @@ export const state = () => {
         icon: 'dashboard'
       },
       {
-        route: '/todo',
-        name: 'Todo',
+        route: '/todos',
+        name: 'Todos',
         icon: 'assignment'
       },
 
@@ -26,8 +26,8 @@ export const state = () => {
         icon: 'notes'
       },
       {
-        route: '/chat',
-        name: 'Chat',
+        route: '/chats',
+        name: 'Chats',
         icon: 'chat'
       }
     ]

@@ -33,7 +33,7 @@
 						<v-btn @click='reset' color='error' flat>Reset</v-btn>
 						<v-spacer></v-spacer>
 						<v-btn color='secondary' flat nuxt to='/users/signup'>Sign Up</v-btn>
-						<v-btn :loading='loading' @click='signIn' color='primary darken-1'>Sign In</v-btn>
+						<v-btn :loading='loading' @click='signIn' color='primary darken-1' light>Sign In</v-btn>
 					</v-card-actions>
 					<v-alert :value='feedback' transition='fade-transition' type='error'>{{ feedback }}</v-alert>
 				</v-card>
