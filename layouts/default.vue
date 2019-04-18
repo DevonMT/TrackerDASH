@@ -1,18 +1,18 @@
 <template>
-  <v-app>
-    <TheNavbar />
-    <Nuxt />
-  </v-app>
+	<v-app>
+		<TheNav/>
+		<Nuxt/>
+	</v-app>
 </template>
 
 <script>
-import TheNavbar from '@/components/TheNavbar'
+	import TheNav from '@/components/TheNav'
 
-export default {
-  components: {
-    TheNavbar
-  }
-}
+	export default {
+		components: {
+			TheNav
+		}
+	}
 </script>
 
 <style>
