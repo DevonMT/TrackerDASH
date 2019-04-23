@@ -5,30 +5,45 @@ export const state = () => {
     drawer: false,
     links: [
       {
-        route: '/',
-        name: 'Dashboard',
-        icon: 'dashboard'
-      },
-      {
-        route: '/todos',
-        name: 'Todos',
-        icon: 'assignment'
-      },
+        name: 'Navigation',
+        pages: [
+          {
+            route: '/',
+            name: 'Dashboard',
+            icon: 'dashboard'
+          },
+          {
+            route: '/todos',
+            name: 'Todos',
+            icon: 'assignment'
+          },
 
-      {
-        route: '/projects',
-        name: 'Projects',
-        icon: 'work'
+          {
+            route: '/projects',
+            name: 'Projects',
+            icon: 'work'
+          },
+          {
+            route: '/notes',
+            name: 'Notes',
+            icon: 'notes'
+          },
+          {
+            route: '/chats',
+            name: 'Chats',
+            icon: 'chat'
+          }
+        ]
       },
       {
-        route: '/notes',
-        name: 'Notes',
-        icon: 'notes'
-      },
-      {
-        route: '/chats',
-        name: 'Chats',
-        icon: 'chat'
+        name: 'Another',
+        pages: [
+          {
+            route: '/',
+            name: 'Dashboard',
+            icon: 'dashboard'
+          }
+        ]
       }
     ]
   }

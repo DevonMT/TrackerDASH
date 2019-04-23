@@ -9,21 +9,21 @@
 	>
 		<v-layout column fill-height>
 			<v-list class="pt-0">
-				<v-list-group v-model="navList">
+				<v-list-group :value="index === 0" activator v-for="(link, index) in links" :key="index">
 					<template v-slot:activator>
 						<v-list-tile>
 							<v-list-tile-content>
-								<v-list-tile-title :class="{'primary--text': navList}">Navigation</v-list-tile-title>
+								<v-list-tile-title>{{ link.name }}</v-list-tile-title>
 							</v-list-tile-content>
 						</v-list-tile>
 					</template>
-					<v-list-tile :key="index" :to="link.route" nuxt v-for="(link, index) in links">
+					<v-list-tile :key="index" :to="page.route" v-for="(page, index) in link.pages">
 						<v-list-tile-action>
-							<v-icon>{{ link.icon }}</v-icon>
+							<v-icon>{{ page.icon }}</v-icon>
 						</v-list-tile-action>
 
 						<v-list-tile-content>
-							<v-list-tile-title>{{ link.name }}</v-list-tile-title>
+							<v-list-tile-title>{{ page.name }}</v-list-tile-title>
 						</v-list-tile-content>
 					</v-list-tile>
 				</v-list-group>

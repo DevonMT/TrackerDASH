@@ -2,9 +2,9 @@
 	<v-toolbar app color='secondary' dark dense flat>
 		<v-toolbar-items>
 			<v-toolbar-side-icon @click='set_drawer'></v-toolbar-side-icon>
-			<v-btn @click='set_miniDrawer' icon v-if='drawer'>
-				<v-icon>{{ `chevron_${miniDrawer ? 'right' : 'left'}` }}</v-icon>
-			</v-btn>
+			<!--<v-btn @click='set_miniDrawer' icon v-if='drawer'>-->
+			<!--	<v-icon>{{ `chevron_${miniDrawer ? 'right' : 'left'}` }}</v-icon>-->
+			<!--</v-btn>-->
 		</v-toolbar-items>
 		<!-- The d-inline-flex removes the space between the two span tags below -->
 		<v-toolbar-title class='text-uppercase primary--text headline d-inline-flex'>
